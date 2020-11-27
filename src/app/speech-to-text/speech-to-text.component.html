@@ -1,0 +1,17 @@
+<h2>
+  Record consultation > START
+</h2>
+<div>
+  <mat-card>
+    Press the mic button to start recording
+
+    <mat-card-content>
+      <button type="button" mat-raised-button color="primary" (click)="startRecording()">
+        <mat-icon *ngIf="!recognizing" class="mat-icon">mic</mat-icon>
+        <mat-icon *ngIf="recognizing" class="mat-icon">stop</mat-icon>
+      </button>
+      <div id="speechdiv" [innerHTML]="liveDictationString"> </div>
+    </mat-card-content>
+  </mat-card>
+  <app-edit-transcription [textToEdit]="finalDictatedString"></app-edit-transcription>
+</div>
