@@ -4,8 +4,8 @@
 
 export const environment = {
   production: false,
-  SUBSCRIPTION_KEY: `${process.env.SUBSCRIPTION_KEY}`,
-  REGION: `${process.env.REGION}`
+  SUBSCRIPTION_KEY: 'some-random-key',
+  REGION: 'random region'
 };
 
 /*

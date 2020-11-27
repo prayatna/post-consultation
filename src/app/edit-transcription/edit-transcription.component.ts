@@ -1,17 +1,25 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnChanges } from '@angular/core';
 
 @Component({
   selector: 'app-edit-transcription',
   templateUrl: './edit-transcription.component.html',
   styleUrls: ['./edit-transcription.component.scss']
 })
-export class EditTranscriptionComponent implements OnInit {
+export class EditTranscriptionComponent implements OnChanges {
   @Input()
   textToEdit!: string;
+  showSummary = false;
 
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnChanges(): void {
+    if (this.textToEdit) {
+    }
   }
 
+  getSummary(): void {
+    // TODO:
+    // get summary from cognitive api service
+    this.showSummary = true;
+  }
 }

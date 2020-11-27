@@ -1,3 +1,15 @@
-<p>
-  edit-transcription works! {{textToEdit}}
-</p>
+<div class="edit-form">
+  <mat-form-field class="edit-full-width">
+    <mat-label>Edit dictation</mat-label>
+    <textarea [(ngModel)]="textToEdit" matInput placeholder="Post consultation text"></textarea>
+  </mat-form-field>
+
+  <button mat-raised-button [disabled]="textToEdit.length === 0" (click)="getSummary()">Get Summary</button>
+  <mat-card class="summary-container" *ngIf="showSummary">
+    <mat-card-content>
+      This is a sample summary
+      TODO: create summary from text
+      {{textToEdit}}
+    </mat-card-content>
+  </mat-card>
+</div>
