@@ -11,6 +11,7 @@ import { EditTranscriptionComponent } from './edit-transcription/edit-transcript
 import { MatInputModule } from '@angular/material/input';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { MatButtonModule } from '@angular/material/button';
     ReactiveFormsModule,
     FormsModule,
     MatButtonModule,
+    MatProgressBarModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

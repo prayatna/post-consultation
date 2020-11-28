@@ -9,6 +9,7 @@ export class EditTranscriptionComponent implements OnChanges {
   @Input()
   textToEdit!: string;
   showSummary = false;
+  showLoadingSpinner = false;
 
   constructor() { }
 
@@ -20,6 +21,11 @@ export class EditTranscriptionComponent implements OnChanges {
   getSummary(): void {
     // TODO:
     // get summary from cognitive api service
-    this.showSummary = true;
+    this.showLoadingSpinner = true;
+
+    setTimeout(() => {
+      this.showLoadingSpinner = false;
+      this.showSummary = true;
+    }, 3000);
   }
 }
